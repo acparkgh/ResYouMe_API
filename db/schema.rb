@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2020_09_24_221432) do
 
   create_table "job_types", force: :cascade do |t|
     t.integer "resume_id"
-    t.string "type"
+    t.string "industry"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
