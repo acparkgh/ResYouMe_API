@@ -1,5 +1,7 @@
 class Api::V1::UsersController < ApplicationController
 
+  skip_before_action :logged_in?, only: [:create]  
+
   def index
     users = User.all 
     render json: users, include: [:resume => {include:[:job_type]}]
